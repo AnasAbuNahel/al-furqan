@@ -161,9 +161,9 @@ with app.app_context():
     db.create_all()
     
     # إنشاء مستخدم مدير 
-    if not User.query.filter_by(username='أبو بكر القدسي').first():
-        admin_user = User(username='أبو بكر القدسي', role='admin')
-        admin_user.set_password('GAMH93')  
+    if not User.query.filter_by(username='أنس أبو نحل').first():
+        admin_user = User(username='أنس أبو نحل', role='admin')
+        admin_user.set_password('407923630')  
         admin_user.permissions = json.dumps({
             "can_view": True,
             "can_edit": True,

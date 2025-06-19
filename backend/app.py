@@ -16,7 +16,7 @@ import json
 
 
 app = Flask(__name__)
-CORS(app)  # 👈 غير آمن للإنتاج
+CORS(app, supports_credentials=True, origins=["https://al-furqan-anas-new.vercel.app"])
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://db_al_alfurqan_user:Gtgu8PwBlB9fyoPjqiki66bYLpDieIRF@dpg-d101bjili9vc73dcets0-a/db_al_alfurqan'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False

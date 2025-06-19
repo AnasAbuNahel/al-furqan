@@ -18,7 +18,7 @@ const AidHistory = () => {
 
   const fetchAids = () => {
     axios
-      .get("https://al-furqan-project-uqs4.onrender.com/api/aids", {
+      .get("https://al-furqan-anas-new.onrender.com/api/aids", {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then((res) => {
@@ -91,7 +91,7 @@ const AidHistory = () => {
 
         try {
           const residentRes = await axios.get(
-            `https://al-furqan-project-uqs4.onrender.com/api/residents/search?name=${encodeURIComponent(الاسم)}&id=${الهوية}`,
+            `https://al-furqan-anas-new.onrender.com/api/residents/search?name=${encodeURIComponent(الاسم)}&id=${الهوية}`,
             {
               headers: { Authorization: `Bearer ${token}` },
             }
@@ -104,7 +104,7 @@ const AidHistory = () => {
           }
 
           await axios.post(
-            `https://al-furqan-project-uqs4.onrender.com/api/aids`,
+            `https://al-furqan-anas-new.onrender.com/api/aids`,
             {
               resident_id: residentId,
               aid_type: نوع_المساعدة,
@@ -132,7 +132,7 @@ const AidHistory = () => {
   const handleDelete = (id) => {
     if (window.confirm("هل أنت متأكد من أنك تريد حذف هذا السجل؟")) {
       axios
-        .delete(`https://al-furqan-project-uqs4.onrender.com/api/aids/${id}`, {
+        .delete(`https://al-furqan-anas-new.onrender.com/api/aids/${id}`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then(() => {
@@ -166,7 +166,7 @@ const AidHistory = () => {
     };
 
     axios
-      .put(`https://al-furqan-project-uqs4.onrender.com/api/aids/${currentAid.id}`, updatedAid, {
+      .put(`https://al-furqan-anas-new.onrender.com/api/aids/${currentAid.id}`, updatedAid, {
         headers: { Authorization: `Bearer ${token}` },
       })
       .then(() => {
